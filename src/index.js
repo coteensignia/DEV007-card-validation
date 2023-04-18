@@ -3,37 +3,56 @@
 //console.log(validator);
 
 
-//Tomar  del input
-let numberCard = document.getElementById("number-card");
-//tomar boton
-let btnValidator = document.getElementById("btn-validator");
+//VALIDAR
+//Tomar  del input y boton
 
-
-// haciendo click en el boton, que tome lo del input
-
-btnValidator.addEventListener("click", () => {
-    //convertimos en array, separamos y reversamos
-    let n = numberCard.value.split("").reverse();
-    //recorremos
-    n.forEach(element => {
-
-    });
-    //imprimir en consola
-    console.log(n);
-
-});
+const numberCard = document.getElementById("number-card");
+const btnValidator = document.getElementById("btn-validator");
 
 
 
+btnValidator.addEventListener('click', () => {
+        let numberCardR = numberCard.value.toString().split("").reverse();
+        let resultadoFinal = ""
+
+        numberCardR.forEach((value, index) => {
+            if (index % 2 === 0) {
+                resultadoFinal += value
+            } else {
+                let multiplicacion = value * 2;
+
+                if (multiplicacion <= 9) {
+                    resultadoFinal += multiplicacion
+                } else {
+                    let nuevo = multiplicacion.toString().split("")
+                    let nuevo2 = nuevo.reduce((acumular, num_actual) => {
+                        return parseInt(acumular) + parseInt(num_actual)
+                    })
+                    resultadoFinal += nuevo2
+                }
+            }
+        });
+
+        let resultadoFinalSuma = resultadoFinal.split("").reduce((acum, num) => {
+            return parseInt(acum) + parseInt(num)
+        })
+        if (resultadoFinalSuma % 10 === 0) {
+            alert("numero valido " + resultadoFinalSuma)
+        } else {
+            alert("numero invalido " + resultadoFinalSuma)
+        }
+        console.log(resultadoFinalSuma)
+    }
+
+)
 
 
 
-//enmascarar
 
-// tomar mi inpud
-// let numberCard = document.getElementById("number-card");
+/*
+enmascarar
+tomar los numeros cuando el cliente escribe en el input
 
-// tomar el boton
 
-// cuando haga click en boton tome el input
-// lo imprimirmos en pantalla
+
+*/

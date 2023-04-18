@@ -125,3 +125,9 @@ h6 {
     justify-items: stretch;
     justify-content: space-around;
 }
+
+input[type="number"] {
+    -webkit-appearance: textfield !important;
+    margin: 0;
+    -moz-appearance: textfield !important;
+}

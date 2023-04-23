@@ -5,6 +5,16 @@
     box-sizing: border-box;
 }
 
+body {
+    position: relative;
+    background-color : #eee;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 h4 {
     text-align: center;
     color: rgb(67, 67, 67);
@@ -24,19 +34,26 @@ h6 {
 }
 
 .container {
+  
     background: rgb(229, 229, 229);
-    width: 380px;
-    height: 430px;
+    width: 375px;
+    height: 601px;
     border-radius: 20px;
-    margin: auto;
-    padding: 30px;
-    margin-top: 30px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     align-content: center;
+
+}
+
+.primero {
+    background: rgb(229, 229, 229);
+    width: 375px;
+    height: 601px;
+    border-radius: 20px;
+ 
 }
 
 .info {
@@ -45,6 +62,7 @@ h6 {
     justify-content: center;
     align-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .tarjeta {
@@ -88,6 +106,7 @@ h6 {
     font-size: medium;
     border: none;
     cursor: pointer;
+    
 }
 
 .btn:hover {
@@ -108,6 +127,16 @@ h6 {
     width: 311px;
     align-items: flex-start;
     justify-content: flex-start;
+    margin-bottom: 50px;
+}
+
+.respuesta {
+    text-align: center;
+
+    margin: 10px;
+    width:100%;
+    padding: 5px;
+
 }
 
 .numercardtarjeta {
@@ -124,7 +153,16 @@ h6 {
     flex-wrap: nowrap;
     justify-items: stretch;
     justify-content: space-around;
+    margin-top: 30px;
 }
+
+.noes {
+    color: red;
+}
+.sies {
+    color: green;
+}
+
 
 input[type="number"] {
     -webkit-appearance: textfield !important;

@@ -32,10 +32,11 @@ const validator = {
     }
   },
 
-  // maskify: function (creditcardNumber) {
-
-  //const maskedNumber = creditcardNumber.slice(0, -4).replace(/./g, "#"); //metodo slice para tomar solo una parte del indice. /g es un modificador global (regular exp) se combina con replace
-  //return maskedNumber += numberCard.slice(-4) //-4 porque es de atras para adelante
+  maskify: function (creditcardNumber) {
+    const primeMask = creditcardNumber.slice(0, -4).replace(/./g, "#");
+    const ultiNoMask = creditcardNumber.slice(-4);
+    return primeMask + ultiNoMask;
+  },
 };
 
 export default validator;

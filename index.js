@@ -1,19 +1,35 @@
 import validator from "./validator.js";
 
+const paginaUno = document.getElementById("paginauno");
+const paginaDos = document.getElementById("paginados");
+const back = document.getElementById("back");
+const esono = document.getElementById("esono");
+
+// id
 const numberCard = document.getElementById("number-card"); //id numero input
 const btnValidator = document.getElementById("btn-validator"); // id boton
 
-//maximo minimo
-numberCard.addEventListener("input", () => {
-  //const num = numberCard.value;
-  // this.value = v.slice(0, 16);
-  // console.log(validator.maskify(numberCard.value));
+paginaDos.style.display = "none";
+
+paginaUno.addEventListener("click", () => {
+  paginaUno.style.display = "none";
+  paginaDos.style.display = "flex";
+});
+
+back.addEventListener("click", () => {
+  paginaUno.style.display = "flex";
+  paginaDos.style.display = "none";
 });
 
 //Is valid
 
 btnValidator.addEventListener("click", () => {
-  validator.isValid(numberCard.value);
+  const result = validator.isValid(numberCard.value);
+  const maski = validator.maskify(numberCard.value);
+
+  if (result === true) {
+    esono.innerHTML = '<p class="sies"> Es Válida  </p> ' + maski;
+  } else {
+    esono.innerHTML = '<p class="noes"> NO Válida  </p> ' + maski;
+  }
 });
-
-

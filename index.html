@@ -12,37 +12,26 @@
 
     </header>
     <main>
-        <div class="container">
-            <div class="title">
-                <button class="btn-back">atras</button>
-                <h4>Agrega una nueva tarjeta válida</h4>
-            </div>
-            <br>
-            <div class="tarjeta">
-            </div>
-            <br>
-            <div class="info">
-                <div class="numero">
-                    <h6>Número de tarjeta</h6>
-                    <input class="numercard" id="number-card" type="number">
-                </div>
-                <button class="btn" id="btn-validator">Validar</button>
-            </div>
-        </div>
+        <img src="../img/primero.png" alt="" class="primero" id="paginauno">
 
-        <div class="container-validacion">
+
+
+        <div class="container" id="paginados">
             <div class="title">
-                <button class="btn-back">atras</button>
+                <button class="btn-back" id="back"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
+                    <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
+                  </svg></button>
                 <h4>Agrega una nueva tarjeta válida</h4>
             </div>
-            <br>
             <div class="tarjeta">
             </div>
-            <br>
             <div class="info">
                 <div class="numero">
                     <h6>Número de tarjeta</h6>
-                    <input class="numercard" id="number-card" type="number">
+                    <input class="numercard" id="number-card" type="number"  onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" maxlength="16" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" >
+                    <div class="respuesta">
+                        <h3 id="esono"></h3>
+                    </div>
                 </div>
                 <button class="btn" id="btn-validator">Validar</button>
             </div>

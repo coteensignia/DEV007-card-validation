@@ -28,7 +28,7 @@
             <div class="info">
                 <div class="numero">
                     <h6>Número de tarjeta</h6>
-                    <input class="numercard" id="number-card" type="number">
+                    <input class="numercard" id="number-card" type="number"  onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" maxlength="16" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" >
                     <div class="respuesta">
                         <h3 id="esono"></h3>
                     </div>

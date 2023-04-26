@@ -22,20 +22,20 @@ Finalmente, el usuario debe hacer clic en el botón "Validar", lo que activará 
 Este proyecto, se ideó en base a este orden:
 
 * Lo primero fue, entender muy bien lo que se requería y el algoritmo de Luhn.
-  ![ algoritmo de Luhn](./img/algoritmo.png)
+  ![ algoritmo de Luhn](/src/img/algoritmo.png)
   
 * Luego se creo un prototipo de alta fidelidad en  _figma_.
-  ![ figma](./img/figma.png)
+  ![ figma](/src/img/figma.png)
 
 * Para empezar con JS. lo primero fue escribir seudocódigo, ya que era más facil de entender lo que necesitaba hacer.
   
 * Codear.
 
 * Hacer las pruebas unitarias requeridas de los métodos usados.
-  ![ unitarias](./img/unitarias.png)
+  ![ unitarias](/src/img/unitarias.png)
   
 * Desplegar en gitHub Page.
-  ![ despliegue](./img/despliegue.png)
+  ![ despliegue](/src/img/despliegue.png)
 
 
 ## 3. Estructura del proyecto

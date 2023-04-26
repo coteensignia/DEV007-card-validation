@@ -27,9 +27,16 @@ btnValidator.addEventListener("click", () => {
   const result = validator.isValid(numberCard.value);
   const maski = validator.maskify(numberCard.value);
 
+  if (numberCard.value === "") {
+    alert("Debes ingresar un número");
+    return
+  }
+
+
   if (result === true) {
     esono.innerHTML = '<p class="sies"> Es Válida  </p> ' + maski;
   } else {
     esono.innerHTML = '<p class="noes"> NO Válida  </p> ' + maski;
   }
+
 });

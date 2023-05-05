@@ -6,7 +6,7 @@ const paginaDos = document.getElementById("paginados");
 const back = document.getElementById("back");
 const esono = document.getElementById("esono");
 
-// id 
+// id
 const numberCard = document.getElementById("number-card"); //id numero input
 const btnValidator = document.getElementById("btn-validator"); // id boton
 
@@ -31,14 +31,13 @@ btnValidator.addEventListener("click", () => {
 
   if (numberCard.value === "") {
     alert("Debes ingresar un número");
-    return
+    return;
   }
-// maski
+  // maski
 
   if (result === true) {
     esono.innerHTML = '<p class="sies"> Es Válida  </p> ' + maski;
   } else {
     esono.innerHTML = '<p class="noes"> NO Válida  </p> ' + maski;
   }
-
 });

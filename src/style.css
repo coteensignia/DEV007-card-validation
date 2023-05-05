@@ -120,6 +120,20 @@ h6 {
     height: 30px;
 }
 
+.nombre {
+    border-radius: 5px;
+    border: 0.4px solid rgb(180, 180, 180);
+    width: 311px;
+    height: 30px;
+}
+
+.date {
+    border-radius: 5px;
+    border: 0.4px solid rgb(180, 180, 180);
+    width: 100px;
+    height: 30px;
+}
+
 .numero {
     display: flex;
     flex-direction: column;

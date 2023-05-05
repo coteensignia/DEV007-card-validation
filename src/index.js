@@ -1,16 +1,18 @@
 import validator from "./validator.js";
 
+//id para paginas
 const paginaUno = document.getElementById("paginauno");
 const paginaDos = document.getElementById("paginados");
 const back = document.getElementById("back");
 const esono = document.getElementById("esono");
 
-// id
+// id 
 const numberCard = document.getElementById("number-card"); //id numero input
 const btnValidator = document.getElementById("btn-validator"); // id boton
 
 paginaDos.style.display = "none";
 
+//eventos
 paginaUno.addEventListener("click", () => {
   paginaUno.style.display = "none";
   paginaDos.style.display = "flex";
@@ -31,7 +33,7 @@ btnValidator.addEventListener("click", () => {
     alert("Debes ingresar un número");
     return
   }
-
+// maski
 
   if (result === true) {
     esono.innerHTML = '<p class="sies"> Es Válida  </p> ' + maski;
